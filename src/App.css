@@ -4,95 +4,70 @@
   justify-content: space-between;
   align-content: stretch;
 }
-
-.Main .Main-Left{
+.Main .Main-Left {
   display: flex;
   flex-direction: column;
-
   background-color: #DDD;
   padding: 1rem 2rem 1rem 4rem;
-
   height: 73dvh;
-
   border-radius: 0rem 1rem 1rem 0rem;
 }
-
-.Main .Main-Right{
+.Main .Main-Right {
   display: flex;
   flex-direction: column;
-
   background-color: #DDD;
   padding: 1rem 4rem 1rem 2rem;
-
   height: 73dvh;
-
   border-radius: 1rem 0rem 0rem 1rem;
 }
-
-.Main .Main-Scroll{
+.Main .Main-Scroll {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
   overflow-y: auto;
-
   height: 93dvh;
   width: 60dvw;
-
   background-color: #BF4;
 }
-
-.Main .Main-Scroll .Card-Section{
+.Main .Main-Scroll .Card-Section {
   background-color: #4BF;
-
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
-.Card-Section h4{
+.Card-Section h4 {
   text-align: left;
   margin-top: 0;
 }
-
-.Card-Section p{
+.Card-Section p {
   text-align: justify;
 }
-
-.Card-Section section{ 
+.Card-Section section {
   background-color: #F4B;
   display: flex;
   flex-direction: column;
-
 }
-
-.Card-Section section h5{
+.Card-Section section h5 {
   text-align: left;
 }
-
-.Card-Section section a{
+.Card-Section section a {
   text-align: left;
   background-color: #4BF;
   padding: 2rem 1rem 1rem 1rem;
 }
-
-.Card-Section section img{
+.Card-Section section img {
   transition: all 1s ease-out;
-  
   width: 16rem;
   height: 16rem;
   border-radius: 0.5rem;
-
   align-self: center;
   object-fit: cover;
 }
-
-.Card-Section section img:hover{
+.Card-Section section img:hover {
   transition: all 1s ease-in;
-  
   width: 21rem;
   height: 21rem;
   border-radius: 0.25rem;
-
   align-self: center;
   object-fit: scale-down;
 }
@@ -106,15 +81,32 @@
   padding-left: 2rem;
   padding-right: 2rem;
 }
-
-.Header a{
-  background-color: #F4B;
-
-  padding: 1rem 2rem 1rem 2rem;
-
-  border-radius: 0.25rem;
+.Header nav {
+  background-color: #4BF;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: auto;
+  margin-right: 2rem;
 }
-
+.Header nav a {
+  background-color: #F4B;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 0.25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.Header span {
+  width: 4rem;
+  height: 4rem;
+}
+.Header span img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
 
 .App {
   text-align: center;
@@ -132,7 +124,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -156,3 +147,5 @@
     transform: rotate(360deg);
   }
 }
+
+/*# sourceMappingURL=App.css.map */
