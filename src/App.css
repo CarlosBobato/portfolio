@@ -24,9 +24,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
   overflow-y: auto;
   height: 93dvh;
-  width: 60dvw;
+  width: 100%;
   background-color: #BF4;
 }
 .Main .Main-Scroll .Card-Section {
