@@ -23,6 +23,8 @@ function App() {
       right: skill
     })
   }
+  let options = { year: 'numeric', month: 'long', day: 'numeric' };
+  let formatter = new Intl.DateTimeFormat('en-US', options);
 
   return (
     <div className="App">
@@ -72,11 +74,13 @@ function App() {
                         <h5>
                           Competências
                         </h5>
-                        {data.skillIds.map((skillId) => {
-                          const competence = model.filter((item) => item.name == "competence").shift();
-                          const skill = competence.skills.filter((item) => item.id == skillId).shift();
-                          return (<a onClick={() => handleCompetenceClick(skill.id)} href="#">{skill.title}</a>);
-                        })}
+                        <p>
+                          {data.skillIds.map((skillId) => {
+                            const competence = model.filter((item) => item.name == "competence").shift();
+                            const skill = competence.skills.filter((item) => item.id == skillId).shift();
+                            return (<a onClick={() => handleCompetenceClick(skill.id)} href="#">{skill.title}</a>);
+                          })}
+                        </p>
                       </section>
                     }
                     {data.links &&
@@ -87,6 +91,17 @@ function App() {
                         <a href="#">Link</a>
                         <img alt="Imagem" src="https://images.cointelegraph.com/cdn-cgi/image/format=auto,onerror=redirect,quality=90,width=1434/https://s3.cointelegraph.com/storage/uploads/view/d12e8157ea2d7339cbdb5bb5b39aedfc.jpg" />
                         <a href="#">Link</a>
+                      </section>
+                    }
+                    {data.date &&
+                      <section>
+                        <h5>
+                          Duração
+                        </h5>
+                        <p>
+                          <a>Início: {Date(data.date.start.substring(0, 4), data.date.start.substring(4, 6), data.date.start.substring(6, 8))}</a>
+                          <a>Conclusão: {data.date.end ? Date(data.date.end.substring(0, 4), data.date.end.substring(4, 6), data.date.end.substring(6, 8)) : "Em andamento"}</a>
+                        </p>
                       </section>
                     }
                   </section>

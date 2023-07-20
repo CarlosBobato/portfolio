@@ -7,6 +7,7 @@
 .Main .Main-Left {
   display: flex;
   flex-direction: column;
+  width: 30dvw;
   background-color: #DDD;
   padding: 1rem 2rem 1rem 4rem;
   height: 73dvh;
@@ -15,6 +16,7 @@
 .Main .Main-Right {
   display: flex;
   flex-direction: column;
+  width: 30dvw;
   background-color: #DDD;
   padding: 1rem 4rem 1rem 2rem;
   height: 73dvh;
@@ -51,6 +53,23 @@
 }
 .Card-Section section h5 {
   text-align: left;
+}
+.Card-Section section p {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Card-Section section p a {
+  min-width: fit-content;
+  width: 20%;
+  white-space: nowrap;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 .Card-Section section a {
   text-align: left;
